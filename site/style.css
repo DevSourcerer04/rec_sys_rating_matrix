@@ -1,0 +1,148 @@
+:root {
+  --ink: #111a1c;
+  --paper: #f8f4ee;
+  --accent: #d65f43;
+  --accent-2: #2f7f7c;
+  --shadow: rgba(15, 20, 22, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top left, #fff6e8, var(--paper) 40%, #f0f5f7);
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+  display: grid;
+  gap: 28px;
+}
+
+.hero {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 2fr 1fr;
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 16px 40px var(--shadow);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  color: var(--accent-2);
+  margin: 0 0 8px;
+}
+
+h1 {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  margin: 0 0 12px;
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.subhead {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 48ch;
+}
+
+.formula {
+  background: linear-gradient(135deg, #f6e7d7, #f9f9f4);
+  border-radius: 14px;
+  padding: 16px;
+  display: grid;
+  gap: 8px;
+  font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+  font-size: 14px;
+}
+
+.panel {
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 14px 30px var(--shadow);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e1d7cc;
+  font-size: 14px;
+  background: #fffdf9;
+}
+
+.actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button#sgd {
+  background: var(--accent-2);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px var(--shadow);
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.metric {
+  font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.mono {
+  background: #0f1516;
+  color: #f7f1e9;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  overflow-x: auto;
+}
+
+@media (max-width: 780px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
